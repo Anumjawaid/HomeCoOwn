@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Box, Typography } from '@mui/material';
 import Background from '../UI/hOwnback.webp'
-import { ThemedButton } from '../Utils/Basic';
+import { ThemedButton,DropDown } from '../Utils/Basic';
 
 const BackgroundSection = () => {
     return (
@@ -50,7 +50,7 @@ const Filters = () => {
 
             }}
         >
-           <input placeholder='dropdown'/>
+           <DropDown name="NAme text"/>
            <input placeholder='dropdown'/>
            <input placeholder='dropdown'/>
            <input placeholder='dropdown'/>
