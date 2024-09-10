@@ -50,16 +50,8 @@ const Filters = () => {
 
             }}
         >
-           <DropDown name="NAme text"/>
-           <input placeholder='dropdown'/>
-           <input placeholder='dropdown'/>
-           <input placeholder='dropdown'/>
-           <input placeholder='dropdown'/>
-           <input placeholder='dropdown'/>
-           <input placeholder='dropdown'/>
-           <input placeholder='dropdown'/>
-           <input placeholder='dropdown'/>
-           <input placeholder='dropdown'/>
+           <DropDown placeholder="Select Property " value="Property "/>
+          
         </Box>
 
     )
