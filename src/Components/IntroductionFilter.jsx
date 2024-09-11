@@ -52,8 +52,8 @@ const Filters = () => {
 
             }}
         >
-           <DropDown placeholder="Select Property " value="Property "/>
-           <DropDown placeholder="Select Country " value={"countries"}/>
+           <DropDown placeholder="Select Property " list={["Prop","ion"]} value="Property "/>
+           <DropDown placeholder="Select Country " list={countries}/>
           
         </Box>
 

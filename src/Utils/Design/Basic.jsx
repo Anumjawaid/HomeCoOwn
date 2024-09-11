@@ -68,10 +68,14 @@ export function DropDown(props) {
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
-      >
-        <MenuItem sx={{ color: "red" }} onClick={handleClose}>
-          Profile
-        </MenuItem>
+      >{
+          props.list.map((v, i) => (
+            <MenuItem sx={{ color: "red" }} onClick={handleClose}>
+              {v.name}
+            </MenuItem>
+
+          ))
+        }
       </Menu>
     </div>
   );
