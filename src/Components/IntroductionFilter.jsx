@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Box, Typography } from '@mui/material';
 import Background from '../UI/hOwnback.webp'
 import { GradientButton,DropDown } from '../Utils/Design/Basic';
+import { countries } from '../Logics&API\'s/Country';
 
 const BackgroundSection = () => {
     return (
@@ -40,6 +41,7 @@ const BackgroundSection = () => {
 export default BackgroundSection;
 
 const Filters = () => {
+    console.log(countries,"Contreiss")
     return (
         <Box
             sx={{
@@ -51,6 +53,7 @@ const Filters = () => {
             }}
         >
            <DropDown placeholder="Select Property " value="Property "/>
+           <DropDown placeholder="Select Country " value={"countries"}/>
           
         </Box>
 

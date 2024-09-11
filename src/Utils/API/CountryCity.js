@@ -5,18 +5,18 @@ export const cityStateApitoken = "anVUTGFPOFYyYkRGMHhUZ0dLenp1aGU4SWsyRFdEV0Q3bl
 export const ListOfCountriesEndpoint = "https://api.countrystatecity.in/v1/countries";
 export const listofStatesEndpoint = "https://api.countrystatecity.in/v1/countries/SA/states";
 
-export const getStates = async (state) => {
-    try {
+// export const getStates = async (state) => {
+//     try {
         
-        var response = await axios.post(url, {
-            city:state
-        });
-        return response.data
-    }
-    catch (err) {
-        throw err;
-    }
-}
+//         var response = await axios.post(url, {
+//             city:state
+//         });
+//         return response.data
+//     }
+//     catch (err) {
+//         throw err;
+//     }
+// }
 
 export const getCountries = async () => {
     try {
