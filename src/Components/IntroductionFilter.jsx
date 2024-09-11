@@ -48,7 +48,10 @@ const Filters = () => {
                 backgroundColor: 'rgba(255, 255, 255, 0.8)', // Optional: background color with transparency for content
                 padding: 4,
                 borderRadius: 2,
-                alignItems:'center',
+                display: 'flex', // Enable flexbox
+                flexDirection: 'row', // Set direction to row
+                alignItems: 'center', // Align items vertically in the center
+                gap: 2, // Add spacing between the dropdowns
 
             }}
         >
