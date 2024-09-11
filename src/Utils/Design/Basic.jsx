@@ -4,7 +4,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 
 
-export function ThemedButton(props) {
+export function GradientButton(props) {
   return (
     <>
       <Box sx={{
@@ -29,13 +29,16 @@ export function ThemedButton(props) {
 }
 
 export function DropDown(props) {
-
-
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const [menuWidth, setMenuWidth] = React.useState(null);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+    // Set the width of the menu to match the button's width
+    setMenuWidth(event.currentTarget.offsetWidth);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -47,29 +50,29 @@ export function DropDown(props) {
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        sx={{border:"2px solid #feb47b",color:"#feb47b"}}
+        sx={{ border: "2px solid #feb47b", color: "#feb47b" }}
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
       >
-        <span style={{color:"black"}}>{props.placeholder}</span>
+        <span style={{ color: "black" }}>{props.placeholder}</span>
       </Button>
       <Menu
-        
         anchorEl={anchorEl}
         open={open}
-        label="Property"
         onClose={handleClose}
-        sx={{color:"red"}}
-        variant='selectedMenu'
+        PaperProps={{
+          style: {
+            width: menuWidth ? `${menuWidth}px` : 'auto', // Match the width of the button
+          },
+        }}
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
-        
       >
-        <MenuItem sx={{color:"red",}} onClick={handleClose}>Profile</MenuItem>
-       
+        <MenuItem sx={{ color: "red" }} onClick={handleClose}>
+          Profile
+        </MenuItem>
       </Menu>
     </div>
-
-  )
+  );
 }

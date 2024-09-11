@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Box, Typography } from '@mui/material';
 import Background from '../UI/hOwnback.webp'
-import { ThemedButton,DropDown } from '../Utils/Basic';
+import { GradientButton,DropDown } from '../Utils/Design/Basic';
 
 const BackgroundSection = () => {
     return (
@@ -26,7 +26,7 @@ const BackgroundSection = () => {
                     </Typography>
                     <Typography variant='h5'>Own your dream home with ease. Explore co-ownership opportunities and take the first step toward your new home today!</Typography>
                     <Typography variant='h5'>Dreaming of homeownership? Join our co-ownership community today and make it a reality. Start your journey now!</Typography>
-                    <ThemedButton label={"Explore More"}/>
+                    <GradientButton label={"Explore More"}/>
                 </Box>
             <Filters />
 
