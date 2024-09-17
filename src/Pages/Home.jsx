@@ -5,7 +5,6 @@ export function Home(){
         <>
         <Header/>
         <BackgroundSection/>
-        <>Filters</>
         <>Profile</>
         <>Properties</>
         </>

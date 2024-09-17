@@ -8,12 +8,12 @@ export function GradientButton(props) {
   return (
     <>
       <Box sx={{
-        width: 300,
+        width: props.width !=undefined?props.width:300,
         background: 'linear-gradient(to right, #ff7e5f, #feb47b)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '8px',
+        padding: props.padding!=undefined?props.padding:'8px',
         margin: "15px",
         color: 'white',
         borderRadius: "50px",
@@ -70,7 +70,7 @@ export function DropDown(props) {
         }}
       >{
           props.list.map((v, i) => (
-            <MenuItem sx={{ color: "red" }} onClick={handleClose}>
+            <MenuItem key={i+","+v} sx={{ color: "#feb47b" }} onClick={handleClose}>
               {v.name}
             </MenuItem>
 

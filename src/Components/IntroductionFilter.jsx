@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container, Box, Typography } from '@mui/material';
+import { Container, Box, Typography, Stack } from '@mui/material';
 import Background from '../UI/hOwnback.webp'
 import { GradientButton,DropDown } from '../Utils/Design/Basic';
-import { countries } from '../Logics&API\'s/Country';
+import { countries,makeOptions } from '../Logics&API\'s/Country';
+import { PROPERTY_TYPE,PETS_PREFERENCE,RELATIONSHIP_STATUS,CREDIT_STATUS,FINANCIAL_PREFERENCE,COOWNING_PREFERENCE } from '../Constants/filtercontent';
 
 const BackgroundSection = () => {
     return (
@@ -48,14 +49,30 @@ const Filters = () => {
                 padding: 4,
                 borderRadius: 2,
                 display: 'flex', // Enable flexbox
-                flexDirection: 'row', // Set direction to row
+                flexDirection: 'column', // Set direction to row
                 alignItems: 'center', // Align items vertically in the center
                 gap: 2, // Add spacing between the dropdowns
 
             }}
         >
-           <DropDown placeholder="Select Property " list={["Prop","ion"]} value="Property "/>
+            <Stack sx={{ display: 'flex', // Enable flexbox
+                flexDirection: 'row',gap:2 }}>
+           <DropDown placeholder="Type of Property " list={makeOptions(PROPERTY_TYPE)} value="Property "/>
            <DropDown placeholder="Select Country " list={countries}/>
+           <DropDown placeholder="Financial Preference" list={makeOptions(FINANCIAL_PREFERENCE)} value="Property "/>
+           <DropDown placeholder="Credit Preference" list={makeOptions(CREDIT_STATUS)} value="Property "/>
+           <DropDown placeholder="Co-owning Preference" list={makeOptions(COOWNING_PREFERENCE)} value="Property "/>
+           <DropDown placeholder="Relationship Status" list={makeOptions(RELATIONSHIP_STATUS)} value="Property "/>
+           </Stack>
+
+           <Stack sx={{ display: 'flex', // Enable flexbox
+                flexDirection: 'row', }}>
+            <GradientButton label={"Search"} width={100} padding={'4px'}/>
+            <GradientButton label={"Reset"} width={100} padding={'4px'}/>
+
+           </Stack>
+
+
           
         </Box>
 
