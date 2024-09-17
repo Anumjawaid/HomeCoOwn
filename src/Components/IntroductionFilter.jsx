@@ -41,7 +41,6 @@ const BackgroundSection = () => {
 export default BackgroundSection;
 
 const Filters = () => {
-    console.log(countries,"Contreiss")
     return (
         <Box
             sx={{
