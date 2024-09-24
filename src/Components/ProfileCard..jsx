@@ -1,15 +1,28 @@
-import { Card, Container, Stack, Typography, Box,Avatar,Button } from "@mui/material";
-import React from "react";
+import React from 'react';
+import { Box, Typography, Avatar, Button, Stack ,Container} from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 // Custom styles for the profile card
 const ProfileCard = styled(Box)({
-    backgroundColor: '#00bfa5',
+    // backgroundColor: '#00bfa5', // Background color for the lower part
     padding: '20px',
     borderRadius: '16px',
-    color: 'white',
+    border:"1px solid #ff7e5f",
+    color: '#ff7e5f',
     textAlign: 'center',
-    maxWidth: '300px'
+    maxWidth: '300px',
+    position: 'relative',
+    overflow: 'hidden', // Ensures the SVG doesn't overflow the rounded corners
+});
+
+const WaveBackground = styled('div')({
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '50%', // Only cover the top half
+    background: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 150' preserveAspectRatio='none'><path d='M0.00,49.98 C150.00,150.00 271.49,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z' style='stroke: none; fill:%2300bfa5;'></path></svg>")`,
+    backgroundSize: 'cover'
 });
 
 const Stats = styled(Typography)({
@@ -21,11 +34,14 @@ const Label = styled(Typography)({
     fontSize: '12px',
     color: '#ccc'
 });
+const Wave=styled("div")({
+    backgroundColor: "#4CAF50",
+})
 
-export const  Profiles=  ({ name, link, image, data })=> {
+export default function Profiles() {
     return (
         <ProfileCard>
-            <Avatar sx={{ width: 90, height: 90, mx: 'auto' }} src="profile_image_url" />
+            <Wave><Avatar sx={{ width: 90, height: 90, mx: 'auto', mt: 3 }} src="profile_image_url" /></Wave>
             <Typography variant="h6" sx={{ mt: 2 }}>Jennifer Sanchez</Typography>
             <Typography sx={{ mb: 1 }}>Mexico</Typography>
             <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 2 }}>
@@ -51,6 +67,7 @@ export const  Profiles=  ({ name, link, image, data })=> {
         </ProfileCard>
     );
 }
+
 
 export const ProfileGrid = (data) => {
     let a = [{ "name": "Anym Jawaid", link: "/", image: "", data: "data" }]
