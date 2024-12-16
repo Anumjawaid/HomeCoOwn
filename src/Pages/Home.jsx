@@ -1,12 +1,13 @@
+import Header from "../Components/Header&Footer"
+import BackgroundSection from "../Components/IntroductionFilter"
+import { ProfileGrid } from "../Components/ProfileCard."
 export function Home(){
     return(
         <>
-        <>Header</>
-        <>Introduction</>
-        <>Filters</>
-        <>Profile</>
+        <Header/>
+        <BackgroundSection/>
+        <ProfileGrid />
         <>Properties</>
-        <Footer></Footer>
         </>
     )
 }

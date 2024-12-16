@@ -1,0 +1,6 @@
+export const PROPERTY_TYPE=["Land","Condo","Apartment","Row/Townhouse","Investment Property"]
+export const FINANCIAL_PREFERENCE=["Money for a Down Payment","Part of a Down Payment","qualified for mortgage","Prequalified for Mortgage"]
+export const COOWNING_PREFERENCE=["Upper Level","Downstair Level", "House Split Down the Middle","Discussed Later"]
+export const RELATIONSHIP_STATUS=["Single","Couple","Investor","Single with Childern","Adults with Childern"]
+export const CREDIT_STATUS=["Excellent Credit","Good Credit","Bad Credit","Unsure"]
+export const PETS_PREFERENCE=["Pets","No Pets"]
